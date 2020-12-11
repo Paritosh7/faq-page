@@ -1,0 +1,61 @@
+html {
+  min-height: 100%;
+  height: 100%;
+}
+body {
+  width: 100%;
+  background: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  font-size: 12px;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+h1 {
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: hsl(237, 12%, 33%);
+}
+
+#main-content {
+  background: white;
+  width: 70%;
+  margin: 0 auto;
+  padding: 2em;
+  display: flex;
+}
+
+#div-images {
+  position: relative;
+}
+
+#img-pattern {
+  position: absolute;
+  height: 600px;
+  width: 600px;
+  right: 45px;
+}
+
+#img-woman {
+  position: relative;
+  width: 400px;
+  /* margin: auto 0; */
+  top: 115px;
+  right: 92px;
+}
+
+#img-box {
+  position: relative;
+  bottom: 104px;
+  right: 125px;
+}
+
+#div-faqs div {
+  border-bottom: 1px solid hsl(240, 5%, 91%);
+}
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
