@@ -11,7 +11,6 @@
     />
     <!-- displays site properly based on user's device -->
     <link rel="stylesheet" href="style.css" />
-
     <link
       rel="icon"
       type="image/png"
@@ -22,7 +21,7 @@
     <title>Frontend Mentor | FAQ Accordion Card</title>
   </head>
   <body>
-    <section id="main-content">
+    <section id="faq-content">
       <div id="div-images">
         <img id="img-pattern" src="./images/bg-pattern-desktop.svg " alt="" />
         <img
@@ -30,53 +29,71 @@
           src="./images/illustration-woman-online-desktop.svg"
           alt=""
         />
-        <img id="img-box" src="./images/illustration-box-desktop.svg" alt="" />
       </div>
       <div id="div-faqs">
         <h1>FAQ</h1>
-        <div>
-          <h4>How many team members can I invite?</h4>
-          <p>
+        <div class="div-ques-ans">
+          <div class="div-ques">
+            <h4 class="ques">How many team members can I invite?</h4>
+            <img class="arrow" src="./images/icon-arrow-down.svg" alt="" />
+          </div>
+          <p class="ans">
             You can invite up to 2 additional users on the Free plan.There is no
             limit on team members for the Premium plan.
           </p>
         </div>
-        <div>
-          <h4>What is the maximum file upload size?</h4>
-          <p>
+        <div class="div-ques-ans">
+          <div class="div-ques">
+            <h4 class="ques">What is the maximum file upload size?</h4>
+
+            <img class="arrow" src="./images/icon-arrow-down.svg" alt="" />
+          </div>
+          <p class="ans">
             No more than 2GB. All files in your account must fit your allotted
             storage space.
           </p>
         </div>
-        <div>
-          <h4>How do I reset my password?</h4>
-          <p>
+        <div class="div-ques-ans">
+          <div class="div-ques">
+            <h4 class="ques">How do I reset my password?</h4>
+            <img class="arrow" src="./images/icon-arrow-down.svg" alt="" />
+          </div>
+          <p class="ans">
             Click “Forgot password” from the login page or “Change password”
             from your profile page. A reset link will be emailed to you.
           </p>
         </div>
-        <div>
-          <h4>Can I cancel my subscription?</h4>
-          <p>
+        <div class="div-ques-ans">
+          <div class="div-ques">
+            <h4 class="ques">Can I cancel my subscription?</h4>
+            <img class="arrow" src="./images/icon-arrow-down.svg" alt="" />
+          </div>
+          <p class="ans">
             Yes! Send us a message and we’ll process your request no questions
             asked.
           </p>
         </div>
-        <div>
-          <h4>Do you provide additional support?</h4>
-          <p>
+        <div class="div-ques-ans">
+          <div class="div-ques">
+            <h4 class="ques">Do you provide additional support?</h4>
+            <img class="arrow" src="./images/icon-arrow-down.svg" alt="" />
+          </div>
+          <p class="ans">
             Chat and email support is available 24/7. Phone lines are open
             during normal business hours.
           </p>
         </div>
       </div>
+      <img id="img-box" src="./images/illustration-box-desktop.svg" alt="" />
     </section>
 
-    <div class="attribution">
+    <!-- <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
-    </div>
+    </div> -->
   </body>
+
+  <script src="./app.js"></script>
 </html>
