@@ -1,32 +1,26 @@
-var quesClass = document.getElementsByClassName("ques");
-console.log(quesClass);
+var divFaqs = document.getElementById("div-faqs");
 
-for (let ques of quesClass) {
-  let toggle = true;
-  ques.addEventListener("click", (eve) => {
-    let ans = eve.target.parentNode.nextElementSibling;
-    let arrowSibling = eve.target.nextElementSibling;
+/** Since elements need to be handled in a similar way,
+ *  then instead of assigning handler to each of them,
+ *  we put a single handler to the ancestor (divFaqs here).
+ *  Using Event Bubbling (Event delegation)
+ */
+divFaqs.addEventListener("click", (eve) => {
+  let div = eve.target.closest("div");
 
-    if (toggle) {
-      showAns(ques, arrowSibling, ans);
-      toggle = false;
-    } else {
-      hideAns(ques, arrowSibling, ans);
-      toggle = true;
-    }
-  });
-}
+  if (div.classList.contains("div-ques")) {
+    let ans = div.nextElementSibling;
+    let question = div.firstElementChild;
+    let arrow = div.lastElementChild;
+    showAnswer(ans, question, arrow);
+  } else return;
+});
 
-function showAns(ques, arrowSibling, ans) {
-  ques.style.color = "hsl(237, 12%, 33%)";
-  ques.style.fontWeight = "600";
-  arrowSibling.style.transform = "rotate(180deg)";
-  ans.style.display = "block";
-}
-
-function hideAns(ques, arrowSibling, ans) {
-  ques.style.color = "hsl(240, 6%, 50%)";
-  ques.style.fontWeight = "400";
-  arrowSibling.style.transform = "rotate(360deg)";
-  ans.style.display = "none";
+/** handles displaying answer using classList toggle method
+ * for adding removing classes
+ */
+function showAnswer(ans, question, arrow) {
+  ans.classList.toggle("ans_style_active");
+  question.classList.toggle("ques_style_active");
+  arrow.classList.toggle("arrow_transform");
 }
